@@ -11,7 +11,7 @@ import av
 import matplotlib.pyplot as plt
 import transform as transform
 
-from . import models
+import models
 
 
 def convert_checkpoint(model_2d):
