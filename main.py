@@ -202,6 +202,10 @@ def main(args: Namespace):
         checkpoint_model = checkpoints["model_state"]
 
     model.load_state_dict(checkpoint_model, strict=False)
+
+    preds = model(frames)
+
+    print(preds.shape)
 if __name__ == '__main__':
     parser = ArgumentParser()
     parser.add_argument('--video', help='Input video path', type=str, default='Data/--6bJUbfpnQ_000017_000027.mp4')
